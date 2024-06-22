@@ -16,9 +16,13 @@ const LoginPage = () => {
 
   return (
     <div>
-      <h1>Login Page</h1>
+      <h1>Login With Spotify</h1>
       <button className="button" onClick={handleLogin}>
-        Log in with Spotify
+        <div className="spotify">
+          <div className="bar bar-dark"></div>
+          <div className="bar bar-med"></div>
+          <div className="bar bar-light"></div>
+        </div>
       </button>
     </div>
   );

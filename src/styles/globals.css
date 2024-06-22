@@ -5,14 +5,17 @@ body {
     margin: 0;
     font-family: "Arial", sans-serif; /* Change to a cute font if you like */
     background-color: #e8e0f0; /* Light purple background */
-  }
-  
-  main {
+}
+
+main {
     padding: 20px;
-  }
-  
-  /* NavBar styles */
-  nav {
+    display: flex; /* Center content of main section vertically */
+    justify-content: center; /* Center content of main section horizontally */
+    min-height: 100vh; /* Optional: Set minimum height for full viewport */
+}
+
+/* NavBar styles */
+nav {
     background-color: #d3c0e0; /* Lighter purple for navbar */
     color: #333; /* Darker text for better contrast */
     padding: 10px;
@@ -20,30 +23,30 @@ body {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for navbar */
-  }
-  
-  nav h1 {
+}
+
+nav h1 {
     margin: 0;
-  }
-  
-  nav ul {
+}
+
+nav ul {
     list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
-  }
-  
-  nav li {
+}
+
+nav li {
     margin: 0 10px;
-  }
-  
-  nav a {
+}
+
+nav a {
     color: #333; /* Darker text for better contrast */
     text-decoration: none;
-  }
-  
-  /* Buttons (for Login and Dashboard) */
-  .button {
+}
+
+/* Buttons (for Login and Dashboard) */
+.button {
     background-color: #ddc7ff; /* Light pink for buttons */
     color: #333; /* Darker text for better contrast */
     padding: 10px 20px;
@@ -51,14 +54,110 @@ body {
     border-radius: 20px; /* Rounded corners */
     cursor: pointer; /* Indicate clickable button */
     transition: background-color 0.2s ease; /* Smoother hover effect */
+}
+.button-container {
+    display: flex; /* Makes buttons horizontal */
+    justify-content: center; /* Centers buttons horizontally */
+    margin-top: 2rem;
   }
   
-  .button:hover {
+  .button-spacer {
+    width: 2rem; /* Adjust for desired spacing between buttons */
+  }
+  
+  
+.button:hover {
     background-color: #a388db; /* Lighter pink on hover */
+}
+
+/* Spotify Logo From Scratch */
+.spotify {
+    position: relative;
+    margin: 2px auto;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background: radial-gradient(94px 276px, circle farthest-corner, transparent 22%, #270540 22%, #300540 35%, transparent 35%),
+                    linear-gradient(top, #755282, #975eb0);
+    background: linear-gradient(to bottom, #9266bb, #a98fac);
+    border: 1px solid rgba(0, 0, 0, .1);
+    box-shadow: 0 0 4px rgba(0, 0, 0, .5);
+    overflow: hidden;
   }
   
-  /* Footer styles */
-  footer {
+  
+  .bar {
+    position: absolute;
+    width: 320px;
+    height: 200px;
+    border-radius: 50%;
+    border: 30px solid #000000;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    transform: rotate(8deg) scale(.7);
+  }
+  
+  .bar-dark {
+    top: 20px;
+    left: -40px;
+  }
+  
+  .bar-dark::before,
+  .bar-dark::after {
+    background: #000000;
+  }
+  
+  .bar-med {
+    top: 53px;
+    left: -44px;
+    transform: rotate(8deg) scale(.6);
+    border-top-color: #000000;
+  }
+  
+  
+  .bar-med::before,
+  .bar-med::after {
+    background: #000000;
+  }
+  
+  
+  .bar-light {
+    top: 80px;
+    left: -49px;
+    transform: rotate(8deg) scale(.5);
+    border-top-color: #000000;
+  }
+  
+  
+  .bar-light::before,
+  .bar-light::after {
+    background: #180c1b;
+  }
+  
+  
+  .bar::before,
+  .bar::after {
+    content: '';
+    position: absolute;
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+  }
+  
+  .bar::before {
+    top: 0px;
+    left: 5px;
+  }
+  
+  .bar::after {
+    top: 1px;
+    right: 4px;
+  }
+
+
+/* Footer styles */
+footer {
     background-color: #d3c0e0; /* Lighter purple for footer */
     color: #333; /* Darker text for better contrast */
     text-align: center;
@@ -66,20 +165,38 @@ body {
     position: fixed;
     width: 100%;
     bottom: 0;
-  }
-  
+}
 
-  /*TrackList*/
+/* Centering error and loading messages */
+.error-message,
+.loading-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Additional styles for error/loading message appearance (optional) */
+}
 
-  .recommended-tracks-container {
+/* TrackList (assuming it's a component that displays tracks) */
+.recommended-tracks-container {
     margin-top: 2rem;
     padding: 1rem;
     border: 1px solid #ddd;
     border-radius: 5px;
-  }
-  
-  .recommended-tracks-container h2 {
+}
+
+.recommended-tracks-container h2 {
     margin-bottom: 1rem;
     font-size: 1.2rem;
+}
+*, ::before, ::after {
+    box-sizing: border-box;
+  }
+  
+  html {
+    height: 100%;
+  }
+  
+  body {
+    background: radial-gradient(center center, circle farthest-side, #E6E6E6, #CCC);
   }
   

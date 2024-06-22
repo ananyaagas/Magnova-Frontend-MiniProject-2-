@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
   return (
     <nav>
-      {/* Logo or brand name */}
       <h1>Ananya Spotify App</h1>
       {/* Navigation links */}
       <ul>
