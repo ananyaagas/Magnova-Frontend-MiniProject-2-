@@ -3,8 +3,8 @@ import React from "react";
 // The LoginPage component allows users to log in to the application
 const LoginPage = () => {
   const handleLogin = () => {
-    const clientId = "YOUR_SPOTIFY_CLIENT_ID"; // Replace with your Spotify client ID
-    const redirectUri = "http://localhost:3000"; // Replace with your redirect URI
+    const clientId = "ffd82f17caba4883b36364ba0631129e"; // Replace with your Spotify client ID
+    const redirectUri = "http://localhost:5173/"; // Replace with your redirect URI
     const apiUrl = "https://accounts.spotify.com/authorize";
     const scope = "user-top-read"; // Scopes for accessing user data
 
