@@ -1,10 +1,25 @@
 import React from "react";
 
+// The LoginPage component allows users to log in to the application
 const LoginPage = () => {
+  const handleLogin = () => {
+    const clientId = "YOUR_SPOTIFY_CLIENT_ID"; // Replace with your Spotify client ID
+    const redirectUri = "http://localhost:3000"; // Replace with your redirect URI
+    const apiUrl = "https://accounts.spotify.com/authorize";
+    const scope = "user-top-read"; // Scopes for accessing user data
+
+    // Construct the URL for Spotify authorization
+    window.location.href = `${apiUrl}?client_id=${clientId}&redirect_uri=${encodeURIComponent(
+      redirectUri
+    )}&scope=${encodeURIComponent(scope)}&response_type=token&show_dialog=true`;
+  };
+
   return (
     <div>
       <h1>Login Page</h1>
-      <p>Please log in to access Ananya's Spotify Stats 2024</p>
+      <button className="button" onClick={handleLogin}>
+        Log in with Spotify
+      </button>
     </div>
   );
 };
