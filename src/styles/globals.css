@@ -68,3 +68,18 @@ body {
     bottom: 0;
   }
   
+
+  /*TrackList*/
+
+  .recommended-tracks-container {
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .recommended-tracks-container h2 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  

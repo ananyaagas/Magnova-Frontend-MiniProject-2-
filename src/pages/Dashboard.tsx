@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import UserProfile from "../components/UserProfile";
 import TrackList from "../components/TrackList";
 
+// ... other imports
+
 // Define the type for the profile data
 interface Profile {
   display_name: string;
